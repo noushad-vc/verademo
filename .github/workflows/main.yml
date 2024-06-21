@@ -51,7 +51,7 @@ jobs:
             vid: ${{ secrets.VID }}
             vkey: ${{ secrets.VKEY }}
             file: "verademo.war" 
-            request_policy: "VeraDemo Policy"
+            request_policy: "PCI 3.2.1 (OWASP 2017, CWE 2020, CERT 2018) COPY"
             debug: 1
             fail_build: false
 
@@ -78,5 +78,6 @@ jobs:
           source_base_path_1: "com/:src/main/java/com/"
           source_base_path_2: "WEB-INF:src/main/webapp/WEB-INF"
           language: java
+          cwe: '89,117'
           prComment: true
           fixType: single

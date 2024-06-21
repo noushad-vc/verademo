@@ -54,6 +54,10 @@ jobs:
             request_policy: "Veracode Recommended SCA Very Low"
             debug: 1
             fail_build: false
+        - uses: actions/upload-artifact@v4
+          with:
+            name: Veracode Pipeline-Scan Results
+            path: filtered_results.json 
 
   veracode-fix:
     runs-on: ubuntu-latest

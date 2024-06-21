@@ -41,12 +41,12 @@ jobs:
           uses: actions/checkout@v3
 
         - name: get archive
-          uses: actions/download-artifact@v4
+          uses: actions/download-artifact@v3
           with:
             name: verademo.war
         - name: pipeline-scan action step
           id: pipelien-scan
-          uses: veracode/Veracode-pipeline-scan-action@v1.0.12
+          uses: veracode/Veracode-pipeline-scan-action@esd-true
           with:
             vid: ${{ secrets.VID }}
             vkey: ${{ secrets.VKEY }}

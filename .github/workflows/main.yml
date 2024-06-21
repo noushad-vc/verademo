@@ -53,6 +53,7 @@ jobs:
             file: "verademo.war" 
             request_policy: "Veracode Recommended SCA Very Low"
             debug: 1
+            esd: true
             fail_build: false
         - uses: actions/upload-artifact@v4
           with:

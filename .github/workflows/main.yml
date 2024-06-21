@@ -51,7 +51,7 @@ jobs:
             vid: ${{ secrets.VID }}
             vkey: ${{ secrets.VKEY }}
             file: "verademo.war" 
-            request_policy: "PCI 3.2.1 (OWASP 2017, CWE 2020, CERT 2018) COPY"
+            request_policy: "Veracode Recommended SCA Very Low"
             debug: 1
             fail_build: false
 

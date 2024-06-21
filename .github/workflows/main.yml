@@ -57,7 +57,7 @@ jobs:
         - uses: actions/upload-artifact@v4
           with:
             name: Veracode Pipeline-Scan Results
-            path: filtered_results.json 
+            path: results.json 
 
   veracode-fix:
     runs-on: ubuntu-latest

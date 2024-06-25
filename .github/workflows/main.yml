@@ -53,7 +53,6 @@ jobs:
             file: "verademo.war" 
             request_policy: "Veracode Recommended SCA Very Low"
             debug: 1
-            esd: true
             fail_build: false
         - uses: actions/upload-artifact@v4
           with:
@@ -80,10 +79,10 @@ jobs:
           inputFile: results.json
           vid: ${{ secrets.VID }}
           vkey: ${{ secrets.VKEY }}
-          source_base_path_1: "com/:src/main/java/com/"
-          source_base_path_2: "WEB-INF:src/main/webapp/WEB-INF"
+          source_base_path_1: "com/:app/src/main/java/com/"
+          source_base_path_2: "WEB-INF:app/src/main/webapp/WEB-INF"
           language: java
           prComment: true
-          createPR: true
+          cwe: '89,117'
           DEBUG: true
-          fixType: single
+          fixType: batch
